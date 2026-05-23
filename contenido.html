@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personajes</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">Gestión de Personajes</h1>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="contenido.html">Personajes</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="container">
+        <h1>Gestión de Personajes</h1>
+
+        <!-- Sección de Controles -->
+        <div class="controles">
+            <button class="btn" onclick="mostrarFormulario()">➕ Agregar Personaje</button>
+            <button class="btn btn-secondary" onclick="ordenarPorNombre()">Ordenar por Nombre</button>
+            <button class="btn btn-secondary" onclick="ordenarPorEdad()">Ordenar por Edad</button>
+        </div>
+
+        <!-- Formulario para Agregar/Editar Personaje (Oculto por defecto) -->
+        <div id="formularioDiv" class="formulario-container" style="display:none;">
+            <h2>Formulario de Personaje</h2>
+            <form id="formularioPersonaje">
+                <label>Nombre del Personaje:</label>
+                <input type="text" id="nombrePersonaje" required>
+
+                <label>Edad:</label>
+                <input type="number" id="edad" required>
+
+                <label>Altura (cm):</label>
+                <input type="number" id="altura" required>
+
+                <label>URL de la Imagen:</label>
+                <input type="text" id="url_imagen" placeholder="ej: imagen.jpg">
+
+                <label>Descripción:</label>
+                <textarea id="descripcion" required></textarea>
+
+                <label>Habilidades (separadas por coma):</label>
+                <input type="text" id="habilidades" placeholder="ej: fuerza, velocidad, inteligencia">
+
+                <label>
+                    <input type="checkbox" id="esVillano">
+                    ¿Es Villano?
+                </label>
+
+                <div class="formulario-botones">
+                    <button type="button" class="btn" onclick="guardarPersonaje()">Guardar</button>
+                    <button type="button" class="btn btn-secondary" onclick="cancelarFormulario()">Cancelar</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Contenedor de Tarjetas de Personajes -->
+        <div id="contenedorPersonajes" class="grid-personajes">
+            <!-- Las tarjetas se generarán aquí con JavaScript -->
+        </div>
+
+    </main>
+
+    <!-- Incluir el archivo JavaScript -->
+    <script src="app.js"></script>
+
+</body>
+</html>
