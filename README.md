@@ -33,4 +33,5 @@ Para ver el proyecto en funcionamiento, simplemente abre el archivo [index.html]
 ## 👥 Autores y Créditos
 
 - 🎨 **Leonardo Claros** — Diseño, estilos y elementos visuales.
+- 🎨 **Nelson Burbano** — Diseño, estilos y elementos visuales.
 - ⚙️ **Juan Felipe Osorio** — Lógica de programación en JavaScript.
